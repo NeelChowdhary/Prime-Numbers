@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+    int originalNumber = 0;
+    int remainingComposite = 0;
+    
+    cout << "Enter an integer: ";
+    cin >> originalNumber;
+    
+    cout << "The prime factors are: " << endl;
+    
+    remainingComposite = originalNumber;
+    
+    int factor = 2;
+    
+    while(remainingComposite > 1){
+        if (remainingComposite % factor == 0){
+            remainingComposite /= factor;
+            cout << factor << endl;
+            factor = 2;
+        } else {
+            factor++;
+        }
+    }
+    return 0;
+}
